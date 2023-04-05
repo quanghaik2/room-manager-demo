@@ -1,0 +1,171 @@
+@import "./variable";
+
+
+
+@media (min-width: 1025px){
+    .room__item{
+        width: 350px;
+        height: fit-content;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+    }
+    .room__item--img, .img__item{
+        width: 100%;
+        height: auto;
+    }
+    .room__item--name, .title__item{
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 14px;
+        color: $nameRoomColor;
+        text-align: center;
+    }
+    .room__item--description{
+        padding: 20px;
+        margin-top: 14px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #4F4F4F;
+    }
+    .room__price{
+        font-size: 20px;
+        font-weight: 700;
+        color: $violet;
+        text-align: center;
+        font-family: $Price;
+        margin-top: 10px;
+    }
+    .item__description{
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+        gap: 10px;
+    }
+    .btn__room--item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn__item{
+        width: 80%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 1205px) and (min-width: 768px) {
+    
+    .room__item{
+        width: 250px;
+        height: fit-content;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+    }
+    .room__item--img, .img__item{
+        width: 100%;
+        height: auto;
+    }
+    .room__item--name, .title__item{
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 12px;
+        color: #FF3300;
+        text-align: center;
+    }
+    .room__item--description{
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 20px;
+        color: #4F4F4F;
+    }
+    .room__price{
+        font-size: 15px;
+        font-weight: 500;
+        color: $violet;
+        text-align: center;
+        font-family: $Price;
+        margin-top: 10px;
+    }
+    .item__description{
+        display: flex;
+        align-items: center;
+        line-height: 8px;
+        gap: 5px;
+    }
+    .btn__room--item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn__item{
+        width: 80%;
+        font-size: 8px;
+    }
+    .btn--none{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+
+    .room__item{
+        width: 150px;
+        height: fit-content;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+    }
+    .room__item--img, .img__item{
+        width: 150px;
+        height: 100px;
+    }
+    .room__item--name, .title__item{
+        margin-left: 10px;
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 12px;
+        color: $nameRoomColor;
+        text-align: center;
+    }
+    .room__item--description{
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 20px;
+        color: #4F4F4F;
+    }
+    .room__price{
+        font-size: 15px;
+        font-weight: 500;
+        color: $violet;
+        text-align: center;
+        font-family: $Price;
+        margin-top: 10px;
+    }
+    .item__description{
+        display: flex;
+        align-items: center;
+        line-height: 8px;
+        gap: 5px;
+    }
+    .btn__room--item{
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // gap: 10px;
+        margin-inline: 12px;
+    }
+    .btn__item{
+        width: 80%;
+        font-size: 8px;
+    }
+    .btn--none{
+        display: none;
+    }
+}

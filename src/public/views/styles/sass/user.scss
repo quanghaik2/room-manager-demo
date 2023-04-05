@@ -1,0 +1,87 @@
+@import "./navbar";
+@import "./variable";
+@import "./description_text";
+@import "./button";
+
+.fa-solid{
+    color: $violet;
+}
+
+.btn__update{
+    background: white;
+    border: none;
+}
+
+@media(min-width: 1025px){
+    ul{
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    .information{
+        width: 500px;
+        padding: 15px 20px;
+        border: 2px solid $green;
+        border-radius: 20px;
+    }
+    .btn__update{
+       font-size: 20px; 
+       line-height: 100%;
+       margin-bottom: 40px;
+    }
+    .form__info li{
+        display: flex;
+        align-items: center;
+    }
+    .title{
+        width: 100%;
+        height: 70px;
+        background: $violet;
+        line-height: 70px;
+        color: #fff;
+        font-size: 30px;
+    }
+    .title h1{
+        margin-left: 30px;
+    }
+    .user__info{
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        justify-content: center;
+    }
+    .reservation__item{
+        border: 3px solid $violet;
+        border-radius: 40px;
+        margin-top: 40px;
+        padding: 20px 16px;
+    }
+
+    .setting{
+        // display: none;
+        position: absolute;
+        top: 30%;
+        right: 0;
+        background: #fff;
+        color: $violet;
+        box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.922);
+    }
+    
+    
+}
+
+@media(max-width: 1025px) and (min-width: 768px){
+    ul{
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    .information{
+        width: 500px;
+        padding: 15px 20px;
+        border: 2px solid $green;
+        border-radius: 20px;
+    }
+    .user__info li{
+        margin-bottom: 40px;
+    }
+    
+}

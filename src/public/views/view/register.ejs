@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/sass/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <title>Khách sạn không tên</title>
+</head>
+
+<body>
+    <div class="content">
+       <div class="login">
+        <div class="from__login">
+            <div class="login__title">
+            <h1 class="text__title--content">Đăng ký
+            </h1>
+
+            <div class="login--input">
+               <form action="/api-hotel/register" method="post">
+                <h2 class="input__text">Họ tên</h2>
+                <input type="text" class="input__name login__input" placeholder="Tên người dùng" name="name">
+            </div>
+            <div class="login--input">
+               <form action="/api-hotel/register" method="post">
+                <h2 class="input__text">Số điện thoại</h2>
+                <input type="text" class="input__name login__input" placeholder="Số điện thoại" name="phone">
+            </div>
+            <div class="login--input">
+               <form action="/api-hotel/register" method="post">
+                <h2 class="input__text">Email</h2>
+                <input type="text" class="input__name login__input" placeholder="Email" name="email">
+            </div>
+            <div class="login--input">
+               <form action="/api-hotel/register" method="post">
+                <h2 class="input__text">Địa chỉ nhà</h2>
+                <input type="text" class="input__name login__input" placeholder="Địa chỉ" name="address" >
+            </div>
+
+            <div class="login--input">
+                <h2 class="input__text">Tên đăng nhập</h2>
+                <input type="text" class="input__username login__input" placeholder="Tên đăng nhập" minlength="3" maxlength="40" name="userName">
+            </div>
+            <div class="login--input">
+                <h2 class="input__text">Mật khẩu</h2>
+                <input type="password" class="input__password login__input" placeholder="Mật khẩu" minlength="8" maxlength="30" name="passWord">
+            </div>
+            <div class="login--input">
+                <h2 class="input__text">Nhập lại mật khẩu</h2>
+                <input type="password" class="comfirm__password login__input" placeholder="Nhập lại mật khẩu" minlength="8" maxlength="30">
+            </div>
+            <button class="btn__register btn-max">Đăng ký</button>
+               </form>
+            <div class="other__connection">
+                <h1 class="other__connection--text">Hoặc</h1>
+                <div class="connect__gg"><img src="../../img/google.png" alt=""></div>
+            </div>
+            <p> Nếu bạn đã có tài khoản, <a class="to--register" href="/api-hotel/login">Đăng nhập</a></p></div>
+        </div>
+
+        <img src="../../img/Exlorer_Illustration 1.png" alt="" class="login__img">
+       </div>
+    </div>
+
+    <script>
+        function showPassWord(){
+            const items = document.querySelectorAll('login__input');
+        }
+    </script>
+   
+</body>
+
+
+</html>

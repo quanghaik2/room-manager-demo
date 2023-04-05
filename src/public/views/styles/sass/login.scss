@@ -1,0 +1,212 @@
+@import './reset';
+@import './button';
+@import './text_title';
+@import './description_text';
+@import './input';
+
+@media (min-width: 1025px) {
+    .content{
+
+        padding: 30px 100px;
+       
+    }
+    .login{
+        padding: 20px 35px;
+        display: flex;
+        gap: 20px;
+        border-radius: 20px;
+        align-items: center;
+        border: 3px solid $violet;
+        box-shadow: 7px 7px 10px rgba(26, 25, 25, 0.51);
+    }
+    .login__title{
+        margin-bottom: 50px;
+        
+    }
+    .from__login{
+        width: 700px;
+    }
+    .login__img{
+        width: 700px;
+    }
+    // .other__connection__text {
+    //     position: absolute;
+    //     width: 480px;
+    //     height: 0px;
+    //     left: 240px;
+    //     top: calc(50% - 0px/2 + 314px);
+    
+    //     /* white */
+    
+    //     background: #FFFFFF;
+    //     /* blue/ 1 9 */
+    
+    //     border: 2px solid #C8D3F9;
+    // }
+    .other__connection--text{
+        margin-top: 10px;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .login--input{
+        margin-top: 25px;
+    }
+    
+    .connect__gg{
+        width: 100%;
+        padding: 5px 0;
+        border-radius: 20px;
+        border: 2px solid $violet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    p{
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1025px){
+    .content{
+
+        padding: 30px 100px;
+       
+    }
+    .login{
+        padding: 10px 25px;
+        display: flex;
+        gap: 15px;
+        border-radius: 20px;
+        align-items: center;
+        border: 3px solid $violet;
+        box-shadow: 7px 7px 10px rgba(26, 25, 25, 0.51);
+    }
+    .login__title{
+        margin-bottom: 30px;
+    }
+    .from__login{
+        width: 300px;
+    }
+    .login__img{
+        width: 300px;
+    }
+    // .other__connection__text {
+    //     position: absolute;
+    //     width: 480px;
+    //     height: 0px;
+    //     left: 240px;
+    //     top: calc(50% - 0px/2 + 314px);
+    
+    //     /* white */
+    
+    //     background: #FFFFFF;
+    //     /* blue/ 1 9 */
+    
+    //     border: 2px solid #C8D3F9;
+    // }
+    .other__connection--text{
+        margin-top: 10px;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .login--input{
+        margin-top: 25px;
+    }
+    
+    .connect__gg{
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 20px;
+        border: 2px solid $violet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .connect__gg img{
+       width: 15px;
+       height: 15px;
+    }
+    
+    p{
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+}
+
+
+@media (max-width: 768px){
+    .content{
+
+        padding: 50px 5px;
+       
+    }
+    .login{
+        padding: 10px 25px;
+        display: flex;
+        gap: 15px;
+        border-radius: 20px;
+        align-items: center;
+        border: 3px solid $violet;
+        box-shadow: 7px 7px 10px rgba(26, 25, 25, 0.51);
+    }
+    .login__title{
+        margin-bottom: 30px;
+    }
+    .from__login{
+        width: 300px;
+    }
+    .login__img{
+        width: 300px;
+        display: none;
+
+    }
+    // .other__connection__text {
+    //     position: absolute;
+    //     width: 480px;
+    //     height: 0px;
+    //     left: 240px;
+    //     top: calc(50% - 0px/2 + 314px);
+    
+    //     /* white */
+    
+    //     background: #FFFFFF;
+    //     /* blue/ 1 9 */
+    
+    //     border: 2px solid #C8D3F9;
+    // }
+    .other__connection--text{
+        margin-top: 10px;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .login--input{
+        margin-top: 25px;
+    }
+    
+    .connect__gg{
+        width: 100%;
+        padding: 5px 0;
+        border-radius: 20px;
+        border: 2px solid $violet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .connect__gg img{
+       width: 15px;
+       height: 15px;
+    }
+    
+    p{
+        margin-top: 20px;
+        text-align: center;
+    }
+}

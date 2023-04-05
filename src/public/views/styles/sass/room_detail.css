@@ -1,0 +1,46 @@
+.room__name {
+  color: #FF3300;
+}
+
+@media (min-width: 1025px) {
+  .btn__item {
+    padding: 8px 30px;
+    background-color: #9B51E0;
+    color: #fff;
+    border-radius: 0.5rem;
+    border: none;
+    text-align: center;
+  }
+  .room__price {
+    font-family: "Dancing Script", cursive;
+    color: #9B51E0;
+  }
+}
+@media (min-width: 600px) and (max-width: 1025px) {
+  .btn__item {
+    padding: 8px 30px;
+    background-color: #9B51E0;
+    color: #fff;
+    border-radius: 0.5rem;
+    border: none;
+    text-align: center;
+  }
+  .room__price {
+    font-family: "Dancing Script", cursive;
+    color: #9B51E0;
+  }
+}
+@media (max-width: 600px) {
+  .btn__item {
+    padding: 8px 30px;
+    background-color: #9B51E0;
+    color: #fff;
+    border-radius: 0.5rem;
+    border: none;
+    text-align: center;
+  }
+  .room__price {
+    font-family: "Dancing Script", cursive;
+    color: #9B51E0;
+  }
+}/*# sourceMappingURL=room_detail.css.map */

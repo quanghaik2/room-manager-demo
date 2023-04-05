@@ -1,0 +1,53 @@
+@import './variable';
+
+.room__name{
+    color: $nameRoomColor;
+}
+
+@media (min-width: 1025px) {
+    .btn__item{
+        padding: 8px 30px;
+        background-color: $violet;
+        color: #fff;
+        border-radius: 0.5rem;
+        border: none;
+        text-align: center;
+    }
+    .room__price{
+        font-family: "Dancing Script", cursive;
+        color: $violet;
+        
+    }
+}
+
+@media (min-width: 600px) and (max-width:1025px) {
+    .btn__item{
+        padding: 8px 30px;
+        background-color: $violet;
+        color: #fff;
+        border-radius: 0.5rem;
+        border: none;
+        text-align: center;
+    }
+    .room__price{
+        font-family: "Dancing Script", cursive;
+        color: $violet;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .btn__item{
+        padding: 8px 30px;
+        background-color: $violet;
+        color: #fff;
+        border-radius: 0.5rem;
+        border: none;
+        text-align: center;
+    }
+    .room__price{
+        font-family: "Dancing Script", cursive;
+        color: $violet;
+        
+    }
+}

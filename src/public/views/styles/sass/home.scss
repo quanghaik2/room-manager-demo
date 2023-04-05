@@ -1,0 +1,87 @@
+
+@import "./reset";
+@import "./variable";
+@import "./header";
+@import "./button";
+@import "./footer";
+
+.aboutHotel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.aboutHotel > * {
+    flex: 1;
+}
+.description--title{
+    color: $violet;
+    font-weight: 900;
+    font-size: 22px;
+    margin-bottom: 60px;
+}
+
+.aboutHotel--event{
+    height: 500px;
+    background-image: url("https://znews-photo.zingcdn.me/w660/Uploaded/wyhktpu/2022_01_21/2_3_.png");
+    background-size: 100%;
+    color: white;
+}
+
+.description--text{
+    width: 500px;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.aboutHotel--description{
+   
+}
+.img__description{
+    margin-left: 30px;
+    height: 400px;
+    margin-top: 67px;
+    margin-bottom: 67px;
+}
+
+.even--title{
+    padding-top: 150px;
+    text-align: center;
+    color: $footer;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.galleris{
+    margin-top: 54px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.event--description{
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+    width: 558px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $black;
+}
+
+
+
+.img--galleris{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}

@@ -1,0 +1,95 @@
+@import "./header";
+@import "./footer";
+@import "./variable";
+@import "./description_text";
+@import "./reset";
+@import "./button";
+@import "./room_item";
+
+@media (min-width: 1025px) {
+    .facilities__description{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 60px;
+        line-height: 20px;
+    }
+    
+    .facilities--list{
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-between;
+        padding: 120px;
+        gap: 10px;
+    }
+    .img__item{
+        width: 100%;
+        height: 350px;
+    }
+    .title__item{
+        text-align: center;
+        font-size: 30px;
+        padding: 40px 0;
+        color: $violet;
+    }
+}
+
+@media (min-width: 600px) and (max-width:1025px){
+    .facilities__description{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 60px;
+        line-height: 20px;
+    }
+    
+    .facilities--list{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .img__item{
+        width: 100%;
+        height: 200px;
+    }
+    .title__item{
+        text-align: center;
+        font-size: 15px;
+        padding: 40px 0;
+        color: $violet;
+    }
+}
+
+@media (max-width: 600px){
+    .facilities__description{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px;
+        line-height: 12px;
+    }
+
+    .facilities--list{
+        padding: 30px 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .img__item{
+        width: 100%;
+        height: 120px;
+    }
+    .title__item{
+        text-align: center;
+        font-size: 15px;
+        padding: 40px 0;
+        color: $violet;
+    }
+}
+

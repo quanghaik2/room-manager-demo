@@ -1,0 +1,44 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit; /* sử dụng giá trị từ thẻ cha */
+  text-decoration: none; /* không có đường gạch chân */
+  display: inline; /* biến thành phần tử inline */
+}
+html{
+    width:100%;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+ul li{
+    list-style: none;
+}
+table, th, td {
+  border:1px solid black;
+  padding-inline: 10px;
+  padding-block: auto;
+  padding-block: 5px;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}

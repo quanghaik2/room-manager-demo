@@ -1,0 +1,232 @@
+@import "./reset";
+@import "./variable";
+
+// desktop
+@media(min-width: 1025px){
+    .navbar{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        background: #fff;
+        // margin-right: 250px;
+        // position: absolute;
+    }
+    
+    .navbar--logo{
+        position: absolute;
+        left: 6%;
+        float: left;
+        margin-right: 350px;
+        // padding: 0 39px;
+        font-family: $Roboto;
+        font-weight: 900;
+        font-size: 27px;
+        line-height: 19px;
+        text-align: center;
+        color: #9B51E0;
+    }
+    
+    .navbar--menu{
+        display: flex;
+        gap: 50px;
+        
+        
+    }
+    .menu__item{
+        font-weight: 700;
+        font-size: 18px;
+        color: $black;
+        font-family: $Roboto;
+    }
+
+    .account{
+        position: absolute;
+        right: 6%;
+        top: 30%;
+        background-color: white;
+        border: 2px solid $violet;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .fa-solid{
+        padding: 10px;
+    }
+    .fa-user{
+        position: relative;
+    }
+
+    
+    .setting{
+        display: none;
+        position: absolute;
+        top: 70%;
+        right: 0;
+        background: #fff;
+        color: $violet;
+        box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.922);
+    }
+    .setting li{
+        padding: 10px;
+    }
+    .setting li:hover{
+       background: #d6cccc;
+       color: rgba(243, 11, 11, 0.884);
+    }
+    .user--icon:hover .setting{
+        display: block;
+    }
+
+    
+}
+
+@media (min-width: 600px) and (max-width: 1024px){
+    .navbar{
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .navbar--logo{
+        position: absolute;
+        left: 10%;
+        margin-right: 30px;
+        font-family: $Roboto;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #9B51E0;
+    }
+    
+    .navbar--menu{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu__item{
+        font-weight: 500;
+        font-size: 8px;
+        color: $black;
+        font-family: $Roboto;
+    }
+
+    .account{
+        background-color: white;
+        border: 2px solid $violet;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+        position: absolute;
+        right: 10%;
+    }
+    .fa-solid{
+        padding: 3px;
+    }
+    .setting{
+        position: absolute;
+        top: 7%;
+        right: 5%;
+        background: #fff;
+        color: $violet;
+        box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.922);
+        font-size: 10%;
+    }
+    .setting li{
+        padding: 10px;
+    }
+    .setting li:hover{
+       background: #d6cccc;
+       color: rgba(243, 11, 11, 0.884);
+    }
+
+    .user--icon:hover .setting{
+        display: block;
+    }
+}
+
+@media (max-width: 600px){
+    .navbar{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .navbar--logo{
+        margin-right: 20px;
+        font-family: $Roboto;
+        font-weight: 900;
+        font-size: 15px;
+        text-align: center;
+        color: #9B51E0;
+    }
+    
+    .navbar--menu{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu__item{
+        font-weight: 400;
+        font-size: 7px;
+        color: $black;
+        font-family: $Roboto;
+    }
+
+    .account{
+        background-color: white;
+        border: 2px solid $violet;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 4%;
+        font-size: 8px;
+        
+    }
+    .account:hover .setting{
+        display: block;
+    }
+    .fa-solid{
+        padding: 6px;
+    }
+
+    .setting{
+        display: none;
+        position: absolute;
+        top: 7%;
+        right: 0;
+        background: #fff;
+        color: $violet;
+        font-size: 8px;
+        box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.922);
+    }
+    .setting li{
+        padding: 6px;
+    }
+    .user--icon:hover{
+       background: #d6cccc;
+       color: rgba(243, 11, 11, 0.884);
+    }
+}
+.active{
+    color: $violet;
+}
+
+

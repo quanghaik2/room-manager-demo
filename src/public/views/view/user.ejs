@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/sass/user.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="navbar--logo">Hotel Lunar</h1>
+        <ul class="navbar--menu">
+            <li class="menu__item"><a href="/api-hotel/home">Trang chủ</a></li>
+            <li class="menu__item"><a href="/api-hotel/room">Phòng khách sạn</a></li>
+            <li class="menu__item"><a href="/api-hotel/facilities">Khu giải trí</a></li>
+            <li class="menu__item"><a href="/api-hotel/contact">Liên hệ</a></li>
+            <div class="user--icon">
+                <a class="account" href="/api-hotel/user" ><i class="fa-solid fa-user item__icon"></i></a>
+                <ul class="setting">
+                    <li><a href="/api-hotel/user"><i class="fa-solid fa-gear"></i>Xem thông tin cá nhân</a></li>
+                    <li><a href="/api-hotel/log-out"><i class="fa-solid fa-arrow-right-from-bracket"></i>Đăng xuất</a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div class="title">
+        <h1><i class="fa-regular fa-user"></i> Thông tin cá nhân</h1>
+    </div>
+    
+    <div class="user__info">
+        <ul class="form__info">
+            <form action="#" method="post">
+            <li><input name="name" type="text" class="name information" value="<%= user.name %>"> <button type="submit" class="btn__update"><i class="fa-sharp fa-solid fa-pen"></i></button></li>
+            <li><input name="email" type="text" class="name information" value="<%= user.email %>"> <button type="submit" class="btn__update"><i class="fa-sharp fa-solid fa-pen"></i></button></li>
+            <li><input name="phone" type="text" class="name information" value="<%= user.phone %>"> <button  type="submit" class="btn__update"><i class="fa-sharp fa-solid fa-pen"></i></button></li>
+            <li><input name="address" type="text" class="name information" value="<%= user.address %>"> <button type="submit" class="btn__update"><i class="fa-sharp fa-solid fa-pen"></i></button></li>
+            </form>
+        </ul>
+        <div class="reservation__list">
+            <% for(let i = 0 ; i < reservation.length; i++) { %>
+                <div class="reservation__item">
+                   <form action="/api-hotel/delete/reservation/<%= reservation[i].id %>" method="post">
+                    <h1 class="description__title">Phòng số: <%= reservation[i].nameRoom %>  </h1>
+                    <p class="description__text">giá phòng: <%= reservation[i].total_price %> </p>
+                    <p class="description__text">Thời gian đến <%= reservation[i].checkInDate %></p>
+                    <p class="description__text">thời gian rời đi: <%= reservation[i].checkOutDate %> </p>
+                    <button type="submit" class="btn__cancel">Hủy đặt phòng</button>
+                   </form>
+                </div>
+                <% } %>
+        </div>
+    </div>
+
+    
+</body>
+</html>

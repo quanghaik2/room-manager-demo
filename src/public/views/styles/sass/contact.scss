@@ -1,0 +1,57 @@
+@import "./header";
+@import "./footer";
+@import "./button";
+@import "./reset";
+@import "./input";
+@import "./text_title";
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content__title--contact{
+    margin: 40px 0;
+}
+.contact__input{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input__yourName--contact, .input__yourEmail--contact, .input__yourMessage--contact{
+        width: 500px;
+        margin-bottom: 20px;
+}
+
+.input__yourMessage--contact{
+    height: 200px;
+    text-align: start;
+}
+.input__yourMessage--contact::placeholder {
+    position: relative;
+    top: -80px; /* Điều chỉnh khoảng cách từ input đến placeholder */
+  }
+.btn-senMessage{
+    margin-top: 39px;
+    width: 500px;
+    padding: 16px 0;
+}
+
+.contact--item{
+    margin-top: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.contact__item{
+    width: 350px;
+    padding: 25px 0;
+    display: flex;
+    gap: 12px;
+}
+.contact__item i{
+    color: $violet;
+}

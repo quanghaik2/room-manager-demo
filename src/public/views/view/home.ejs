@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/sass/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <title>Khách sạn không tên</title>
+</head>
+
+<body>
+    <header>
+        <%- include("header") %>
+        <script>
+            const items = document.querySelectorAll('.menu__item');
+            items.forEach(item => {
+            item.addEventListener('click', () => {
+            items.forEach(otherItem => otherItem.classList.remove('active'));
+            item.classList.add('active');
+          });
+        });
+        </script>
+    </header>
+    <div class="contents">
+        <div class="aboutHotel">
+            <div class="aboutHotel--description">
+                <h1 class="description--title">Về khách sạn Hotel Lunar</h1>
+                <p class="description--text">
+                    Để có được thành công như hôm nay chúng tôi đã gặp nhiều thách thức trong quá trình thi công, bao gồm thiên tai, thiếu hụt nguồn nhân lực và nguồn vật tư. Tuy nhiên, chúng tôi đã vượt qua được mọi khó khăn và hoàn thành dự án với thời gian và chi phí đề ra.
+                </p>
+                <p class="description--text">
+                    Khách sạn được khai trương sau đó và được đón nhận rất tốt bởi khách hàng. Với các tiện nghi và dịch vụ tuyệt vời, khách sạn đã nhanh chóng trở thành một điểm đến yêu thích của khách du lịch. Nó đã mang lại lợi ích kinh tế cho nhóm nhà đầu tư và cũng đã tạo ra nhiều cơ hội việc làm cho người dân địa phương.
+                </p>
+            </div>
+            <img src="../img/tieu-chi-can-co-trong-thiet-ke-phong-khach-san-1.jpg" alt="" class="img__description">
+        </div>
+        <div class="aboutHotel--event">
+            <h1 class="even--title">Sự kiện và tổ chức đám cưới</h1>
+            <p class="event--description">
+                Ladies and gentlemen, history keeps repeating itself but doesn't teach us any lessons. 'Never again' has turned into 'again and again and again.' So today, ladies and gentlemen, take Hotel Lunar as a wake-up call and a message to be our messenger that people are the ones who can change what they want to change. 
+            </p>
+        </div>
+        <div class="img--animation">
+            <h1 class="galleris">
+                Phòng trưng bày của chúng tôi
+            </h1>
+           <div class="img--galleris">
+            <img class="img_item1--galleris" src="../img/bedddd33 1.png" alt="" onclick="changeImg()">
+            <img class="img_item--galleris" src="../img/bedddd33 1.png" alt="">
+            <img class="img_item--galleris" src="../img/bedddd33 1.png" alt="">
+           </div>
+        </div>
+    </div>
+    <footer>
+        <%- include("footer") %>
+    </footer>
+</body>
+
+
+</html>

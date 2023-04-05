@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/sass/room.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Khách sạn không tên</title>
+</head>
+
+<body>
+    <header>
+        <%- include("header") %>
+        <script>
+            const items = document.querySelectorAll('.menu__item');
+            items.forEach(item => {
+            item.addEventListener('click', () => {
+            items.forEach(otherItem => otherItem.classList.remove('active'));
+            item.classList.add('active');
+          });
+        });
+        </script>
+    </header>
+    
+       <div class="content">
+        <div class="room--description">
+            <h1 class="description__title">Danh sách phòng của khách sạn</h1>
+            <p class="description__text">Mỗi phòng sáng sủa, tràn ngập ánh sáng của chúng tôi đều có mọi thứ bạn có thể cần để có một kỳ nghỉ thoải mái. Và vâng,
+                thoải mái không phải là mục tiêu duy nhất của chúng tôi, chúng tôi cũng đánh giá cao thiết kế tốt, bổ sung cho nội thất hiện đại kiểu dáng đẹp
+                bởi các tông màu phong phú của bảng màu thiên nhiên có thể nhìn thấy từ các cửa sổ và sân hiên nhìn ra biển trong phòng của chúng tôi.</p>
+        </div>
+        <div class="search--room">
+            <h2>Lọc </h2>
+            <form action="/api-hotel/search" class="filter--list" method="post">
+                <select class="floatLabel" name="typeRoom">
+                    <!-- <option value="blank"></option> -->
+                    <option value="Tất cả" selected>Tất cả</option>
+                    <option value="Vip">Vip</option>
+                    <option value="Thường">Thường</option>
+                    <option value="Đôi">Đôi</option>
+                    <option value="Đơn">Đơn</option>
+                  </select> 
+                  <button class="btn__filter" type="submit"><i class="fa-solid fa-check"></i></button>
+            </form>        
+        </div>
+        <div class="list--room">
+            <% for(let i = 0 ; i < data.length ; i++) { %>
+                <div class="room__item">
+                    <img src="<%= data[i].imgLink %>" alt="" class="room__item--img">
+                    <p class="room__item--name"><%= data[i].nameRoom %> </p>
+                    <ul class="room__item--description">
+                        <% if(data[i].checkBooking) {%>
+                            <li class="item__description"><p>Tình trạng phòng: </p> <p>Đã thuê</p></li>
+                            <% } else { %>
+                                <li class="item__description"><p>Tình trạng phòng: </p> <p>Còn phòng</p></li>
+                                <% } %>
+                        <li class="item__description"><p>Loại phòng: </p><p><%= data[i].typeRoom %></p></li>
+                    </ul>
+                    <h1 class="room__price"><%= data[i].price %>/đêm</h1>
+                    <div class="btn__room--item">
+                       <form action="/api-hotel/booking_room/<%= data[i].id %>" method="get" class=".request">
+                        <% if(!data[i].checkBooking) {%>
+                            <button type="submit" class="btn__item btn--none">Đặt ngay</button>
+                            <% } %>
+                        </form>
+                       <form action="/api-hotel/room-details/<%= data[i].id %>" method="get" class=".request">
+                        <button type="submit" class="btn__item ">xem chi tiết</button>
+                        </form>
+                       
+                    </div>
+                </div>
+                <% } %>
+           </div>
+       </div>
+       <h1 class="text__content--footer">Đặt phòng ngay hôm nay để nhận được nhiều ưu đãi</h1>
+    
+    <footer>
+        <%- include("footer") %>
+    </footer>
+</body>
+
+
+</html>
