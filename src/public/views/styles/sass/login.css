@@ -274,7 +274,7 @@ button {
     text-align: center;
   }
   .text__title--content {
-    font-size: 12px;
+    font-size: 30px;
     color: #9B51E0;
     font-weight: 500;
     text-align: center;
@@ -427,14 +427,14 @@ button {
 }
 @media (min-width: 1025px) {
   .content {
-    padding: 30px 100px;
+    padding: 40px 100px;
   }
   .login {
-    padding: 20px 35px;
+    padding: 40px 35px;
     display: flex;
     gap: 20px;
     border-radius: 20px;
-    align-items: center;
+    align-items: start;
     border: 3px solid #9B51E0;
     box-shadow: 7px 7px 10px rgba(26, 25, 25, 0.51);
   }
@@ -445,7 +445,8 @@ button {
     width: 700px;
   }
   .login__img {
-    width: 700px;
+    max-width: 500px;
+    width: 100%;
   }
   .other__connection--text {
     margin-top: 10px;

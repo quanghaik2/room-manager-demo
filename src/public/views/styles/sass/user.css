@@ -55,7 +55,7 @@ table {
 @media (min-width: 1025px) {
   .navbar {
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,7 +105,7 @@ table {
   .setting {
     display: none;
     position: absolute;
-    top: 70%;
+    top: 80%;
     right: 0;
     background: #fff;
     color: #9B51E0;
@@ -224,7 +224,7 @@ table {
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 4%;
+    right: 2%;
     font-size: 8px;
   }
   .account:hover .setting {

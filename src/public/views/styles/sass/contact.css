@@ -55,7 +55,7 @@ table {
 @media (min-width: 1025px) {
   .navbar {
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,7 +105,7 @@ table {
   .setting {
     display: none;
     position: absolute;
-    top: 70%;
+    top: 80%;
     right: 0;
     background: #fff;
     color: #9B51E0;
@@ -224,7 +224,7 @@ table {
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 4%;
+    right: 2%;
     font-size: 8px;
   }
   .account:hover .setting {
@@ -374,9 +374,12 @@ header {
     font-size: 12px;
     font-weight: 500;
   }
-  .footer__contacts p {
+  .footer__contacts {
     font-size: 5px;
     font-weight: 400;
+  }
+  .footer--contacts > p {
+    font-size: 8px;
   }
   .footer__item,
   .footer__support {
@@ -763,7 +766,7 @@ table {
     text-align: center;
   }
   .text__title--content {
-    font-size: 12px;
+    font-size: 30px;
     color: #9B51E0;
     font-weight: 500;
     text-align: center;

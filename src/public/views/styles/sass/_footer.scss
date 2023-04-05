@@ -66,9 +66,12 @@
         font-size: 12px;
         font-weight: 500;
     }
-    .footer__contacts p{
+    .footer__contacts{
         font-size: 5px;
         font-weight: 400;
+    }
+    .footer--contacts>p{
+        font-size: 8px;
     }
     
     .footer__item,
