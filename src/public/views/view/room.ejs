@@ -45,7 +45,7 @@
         </div>
         <div class="search--room">
             <h2>Lọc </h2>
-            <form action="/api-hotel/search" class="filter--list" method="post">
+            <form action="/search" class="filter--list" method="post">
                 <select class="floatLabel" name="typeRoom">
                     <!-- <option value="blank"></option> -->
                     <option value="Tất cả" selected>Tất cả</option>
@@ -72,12 +72,12 @@
                     </ul>
                     <h1 class="room__price"><%= data[i].price %>/đêm</h1>
                     <div class="btn__room--item">
-                       <form action="/api-hotel/booking_room/<%= data[i].id %>" method="get" class=".request">
+                       <form action="/booking_room/<%= data[i].id %>" method="get" class=".request">
                         <% if(!data[i].checkBooking) {%>
                             <button type="submit" class="btn__item btn--none">Đặt ngay</button>
                             <% } %>
                         </form>
-                       <form action="/api-hotel/room-details/<%= data[i].id %>" method="get" class=".request">
+                       <form action="/room-details/<%= data[i].id %>" method="get" class=".request">
                         <button type="submit" class="btn__item ">xem chi tiết</button>
                         </form>
                        

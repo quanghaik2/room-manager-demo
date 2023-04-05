@@ -7,7 +7,7 @@ const authenticationController = {
     logOut: async(req,res) =>{
         try{
             res.clearCookie('idUser')
-            return res.redirect('/api-hotel/home');
+            return res.redirect('/home');
         }catch(err){
             res.status(500).json({message: err.message});
             // res.status(404).render("login",{message: "Sai mật khẩu"});
@@ -27,14 +27,14 @@ const authenticationController = {
             const passWord1 = req.body.passWord;
 
             // danh cho admin
-            const response = (await axios.get('http://localhost:3000/api-hotel/all-rooms'));
+            const response = (await axios.get('http://localhost:3000/all-rooms'));
             const rooms = response.data;
-            const users = (await axios.get('http://localhost:3000/api-hotel/get_all_user')).data;
-            const reservations = (await axios.get('http://localhost:3000/api-hotel/reservation')).data
+            const users = (await axios.get('http://localhost:3000/get_all_user')).data;
+            const reservations = (await axios.get('http://localhost:3000/reservation')).data
             const totalPrices = reservations.reduce((totalPrice, reservation)=>{
                 return totalPrice + reservation.total_price 
             },0)
-            // const aRoom = (await axios.get(`http://localhost:3000/api-hotel/get-a-rooms/${idRoom}`)).data
+            // const aRoom = (await axios.get(`http://localhost:3000/get-a-rooms/${idRoom}`)).data
             
 
 
@@ -60,15 +60,15 @@ const authenticationController = {
     },
     admin: async(req,res) =>{
         try{
-                const response = (await axios.get('http://localhost:3000/api-hotel/all-rooms'));
+                const response = (await axios.get('http://localhost:3000/all-rooms'));
                 const rooms = response.data;
-                const users = (await axios.get('http://localhost:3000/api-hotel/get_all_user')).data;
-                const reservations = (await axios.get('http://localhost:3000/api-hotel/reservation')).data
+                const users = (await axios.get('http://localhost:3000/get_all_user')).data;
+                const reservations = (await axios.get('http://localhost:3000/reservation')).data
                 const totalPrices = reservations.reduce((totalPrice, reservation)=>{
                     return totalPrice + reservation.total_price 
                 },0)
                 const idRoom = req.params.id;
-                // const aRoom = (await axios.get(`http://localhost:3000/api-hotel/get-a-rooms/${idRoom}`)).data
+                // const aRoom = (await axios.get(`http://localhost:3000/get-a-rooms/${idRoom}`)).data
                 res.status(200).render("admin_home",{ rooms: rooms, users: users, totalPrices: totalPrices});
 
         }catch(err){

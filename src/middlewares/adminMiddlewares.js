@@ -9,7 +9,7 @@ const adminMiddleware = async(req,res,next) => {
     const account = await Account.findById(req.cookies.idUser);
 
     if(!account){
-        return res.redirect("/api-hotel/login");
+        return res.redirect("/login");
         
     }
     if(!account.checkAdmin){
