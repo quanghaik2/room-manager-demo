@@ -10,14 +10,14 @@ import reservationRouter from "./reservationRouter";
 import userRouter from "./userRouter";
 
 const server = (app) =>{
-        app.use("/api-hotel", testCookie);
-        app.use('/api-hotel', homeAPI);
-        app.use('/api-hotel',facilitiesAPI);        
-        app.use('/api-hotel', contactAPI);
-        app.use('/api-hotel', roomAPI);
-        app.use('/api-hotel',accountRouter);
-        app.use('/api-hotel',authenticationAPI);
-        app.use('/api-hotel',reservationRouter);
-        app.use('/api-hotel',userRouter);
+        app.use( testCookie);
+        app.use( homeAPI);
+        app.use(facilitiesAPI);        
+        app.use( contactAPI);
+        app.use( roomAPI);
+        app.use(accountRouter);
+        app.use(authenticationAPI);
+        app.use(reservationRouter);
+        app.use(userRouter);
     }
 export default server;
