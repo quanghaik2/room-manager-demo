@@ -7,7 +7,7 @@ const authenticationController = {
     logOut: async(req,res) =>{
         try{
             res.clearCookie('idUser')
-            return res.redirect('/home');
+            return res.redirect('/');
         }catch(err){
             res.status(500).json({message: err.message});
             // res.status(404).render("login",{message: "Sai mật khẩu"});
@@ -79,9 +79,9 @@ const authenticationController = {
     getRooms: async(req,res) =>{
         try{
             // const rooms = await axios.get("/all_rooms");
-            const response = (await axios.get('http://localhost:3000/api-hotel/all-rooms')).data;
+            const response = (await axios.get('http://localhost:3000/all-rooms')).data;
             // const rooms = response.data;
-            const users = (await axios.get('http://localhost:3000/api-hotel/get_all_user')).data;
+            const users = (await axios.get('http://localhost:3000/get_all_user')).data;
             res.json(response);
 
         }catch(err){
@@ -94,7 +94,7 @@ const authenticationController = {
             const cs = passport.use(new GoogleStrategy({
                 clientID: "408344986210-br8jlusqn80rvia3s2g8f8ekvi5t349v.apps.googleusercontent.com",
                 clientSecret: "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",
-                callbackURL: "http://localhost:3000/api-hotel/loginGg"
+                callbackURL: "http://localhost:3000/loginGg"
               },
               function(accessToken, refreshToken, profile, cb) {
                 console.log(profile);

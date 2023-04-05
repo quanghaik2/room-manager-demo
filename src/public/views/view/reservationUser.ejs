@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/sass/user.css">
-    <title>Document</title>
+    <title>Hotel Lunar</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
 </head>
 <body>
     <div class="reservation__list">
         <% if(reservation.length > 0) { %>
             <% for(let i = 0 ; i < reservation.length; i++) { %>
                 <div class="reservation__item">
-                   <form action="/api-hotel/delete/reservation/<%= reservation[i].id %>" method="post">
+                   <form action="/delete/reservation/<%= reservation[i].id %>" method="post">
                     <h1 class="description__title" style="font-size: 20px;" >Phòng số: <%= reservation[i].nameRoom %> </h1>
                     <p class="description__text" style="font-size: 20px;">Giá phòng: <%= reservation[i].total_price %> </p>
                     <p class="description__text" style="font-size: 20px;">Thời gian đến <%= reservation[i].checkInDate %></p>

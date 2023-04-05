@@ -24,7 +24,7 @@ const reservationController =
             const checkHour = checkOutDate - checkInDate;
             const Hours = Math.floor(checkHour / (1000 * 60 * 60));
             if(Hours < 0){
-               return res.redirect(`/api-hotel/booking_room/${room.id}`)
+               return res.redirect(`/booking_room/${room.id}`)
             }
             const total_price = (Hours * room.price)/24;
             console.log(Hours);
@@ -33,7 +33,7 @@ const reservationController =
             if(saveReservation){
                 await Room.findByIdAndUpdate(room.id,{checkBooking: true}) 
                 await User.findByIdAndUpdate(req.cookies.idUser, {$push: {reservation: saveReservation.id}})
-                return res.redirect('/api-hotel/user');
+                return res.redirect('/user');
             }else{
                return res.status(400).json("Đăng kí thất bại");
             }
@@ -89,7 +89,7 @@ const reservationController =
             }
             await Room.findByIdAndUpdate(idRoom,{checkBooking: false}) 
             await User.findByIdAndUpdate(req.cookies.idUser, {$pull: {reservation: req.params.id}})
-            res.redirect('/api-hotel/user');
+            res.redirect('/user');
         }
         catch(err){
             res.status(500).json({message: err.message});

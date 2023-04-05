@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../styles/sass/admin_home.css">
 
 <div class="update__room">
-    <form action="/api-hotel/update-room/<%= data.id %>" method="post">
+    <form action="/update-room/<%= data.id %>" method="post">
         <h1 class="text__title--content">Sửa thông tin phòng khách sạn</h1>
     <input type="text" class="input__item input__text" value="<%= data.nameRoom %>" placeholder="Tên phòng" name="nameRoom">
     <input type="text" class="input__item input__text" value="<%= data.price %>" placeholder="Giá" name="price">

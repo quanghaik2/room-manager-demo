@@ -21,7 +21,7 @@ const roomController = {
             // const search = req.body;
             // làm if else đến chết "Hay lắm thằng ngu"
             if(req.body.typeRoom === "Tất cả"){
-                return res.status(200).redirect("/api-hotel/room")
+                return res.status(200).redirect("/room")
             }
             const data = await room.find(req.body);
             console.log(req.body);
@@ -30,7 +30,7 @@ const roomController = {
 
             }
             else{
-                return res.status(200).redirect("/api-hotel/room")
+                return res.status(200).redirect("/room")
             }
            
         }
@@ -47,7 +47,7 @@ const roomController = {
             }else{
                 const newRoom =  new room(req.body);
                 const saveRoom = await newRoom.save();
-                res.redirect('/api-hotel/admin');
+                res.redirect('/admin');
             }
             // console.log(req.body)
         }
@@ -60,7 +60,7 @@ const roomController = {
         try{
             const update = await room.findByIdAndUpdate(req.params.id,req.body);
             if(update){
-                res.status(200).redirect("/api-hotel/admin");
+                res.status(200).redirect("/admin");
             }else{
                 res.status(200).json("Id có cho mày tìm à(Name already exists)");
                 console.log("Not found");
@@ -75,7 +75,7 @@ const roomController = {
         try{
             // const datas = await room.findById(req.params.id);
             const deletes = await room.deleteOne({_id:req.params.id});
-            res.redirect('/api-hotel/admin');
+            res.redirect('/admin');
 
             // if(deletes){
             // res.status.json(deletes);

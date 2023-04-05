@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Trang quản trị - Khách sạn ABC</title>
+	<title>Hotel Lunar</title>
+	<link rel="icon" type="image/x-icon" href="../img/logo.png">
     <link rel="stylesheet" href="../../styles/sass/admin_home.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -38,8 +39,8 @@
 										<th><%= rooms[i].typeRoom  %></th>
 										<th>
 										<div class="btn">
-											<form action="/api-hotel/delete-room/<%= rooms[i]._id %>" method="post"><button class="border--10 btn--reset btn__delete" type="submit"><i class="fa-solid fa-trash-can"></i></button></form>
-											<form action="/api-hotel/form-update-room/<%= rooms[i]._id %>" method="post"><button class="border--10 btn--reset btn__update"><i class="fa-sharp fa-solid fa-pen"></i></button></form>
+											<form action="/delete-room/<%= rooms[i]._id %>" method="post"><button class="border--10 btn--reset btn__delete" type="submit"><i class="fa-solid fa-trash-can"></i></button></form>
+											<form action="/form-update-room/<%= rooms[i]._id %>" method="post"><button class="border--10 btn--reset btn__update"><i class="fa-sharp fa-solid fa-pen"></i></button></form>
 										</div></th>
 									</tr>
 									<% } %>
@@ -52,7 +53,7 @@
 			</div>
 		</div>
 		<div class="add__room display--none">
-			<form action="/api-hotel/add-room" method="post">
+			<form action="/add-room" method="post">
 				<h1 class="text__title--content">Thêm phòng khách sạn</h1>
 			<input type="text" class="input__item input__text" placeholder="Tên phòng" name="nameRoom">
 			<input type="text" class="input__item input__text" placeholder="Giá" name="price">
@@ -109,7 +110,7 @@
 					<th><%= users[i].phone %></th>
 					<th><%= users[i].email %></th>
 					<th><%= users[i].address %></th>
-					<th><form action="/api-hotel/get-reservation-user/<%= users[i]._id %>" method="get"><button class="border--10 btn--reset" type="submit">Xem đơn đặt phòng</button></form></th>
+					<th><form action="/get-reservation-user/<%= users[i]._id %>" method="get"><button class="border--10 btn--reset" type="submit">Xem đơn đặt phòng</button></form></th>
 					</tr>
 					<% } %>	
 				

@@ -21,9 +21,11 @@
                 <li class="item__description d-flex gap-3"><p class="fs-3">Loại phòng: </p><p class="fs-3"><%= data.typeRoom %></p></li>
             </ul>
             <h1 class="room__price">$ <%= data.price %> / ngày</h1>
-            <div class="btn__room--item">
-                <button class="btn__item btn--details fs-4 mt-5" >Đặt ngay</button>
-            </div>
+            <% if(!data.checkBooking){ %>
+                <div class="btn__room--item">
+                    <button class="btn__item btn--details fs-4 mt-5" >Đặt ngay</button>
+                </div>
+                <% } %>  
            </div>
         </div>
         <h1 class="item__description item--details fs-4 m-5 p-5">Mô tả về phòng: <%= data.description %> </h1>
