@@ -7,7 +7,7 @@ const routes = express.Router();
 
 router.route('/login').get(authenticationController.loginView)
                       .post(authenticationController.login);
-router.get('/admin',authenticationController.admin);
+router.get('/admin',adminMiddleware,authenticationController.admin);
 router.get('/get', authenticationController.getRooms)
       .get('/log-out', authenticationController.logOut);
 router.route('/loginGg').post(authenticationController.loginGoogle)

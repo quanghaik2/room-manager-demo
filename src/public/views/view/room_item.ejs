@@ -22,9 +22,11 @@
             </ul>
             <h1 class="room__price">$ <%= data.price %> / ngày</h1>
             <% if(!data.checkBooking){ %>
+               <form action="/booking_room/<%= data.id %>">
                 <div class="btn__room--item">
-                    <button class="btn__item btn--details fs-4 mt-5" >Đặt ngay</button>
+                    <button class="btn__item btn--details fs-4 mt-5" type="submit" >Đặt ngay</button>
                 </div>
+               </form>
                 <% } %>  
            </div>
         </div>

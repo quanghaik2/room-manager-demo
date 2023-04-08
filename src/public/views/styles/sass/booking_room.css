@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (min-width: 1025px) {
   .bkg--header {
     background-image: url("../../../img/Vector.png");
@@ -45,31 +46,502 @@
     font-size: 16px;
   }
 }
+button {
+  margin-top: 26px;
+  display: block;
+  font-size: 12px;
+  padding: 8px 16px;
+  background-color: #9B51E0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.btn--reset {
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.border--10 {
+  border-radius: 10px;
+}
+
+.btn-max {
+  width: 100%;
+  margin-top: 30px;
+  display: block;
+  font-size: 28px;
+  padding: 8px 16px;
+  background-color: #9B51E0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.btn__item {
+  width: 100%;
+  margin-top: 30px;
+  display: block;
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #9B51E0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  button {
+    margin-top: 26px;
+    display: block;
+    font-size: 12px;
+    padding: 8px 16px;
+    background-color: #9B51E0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  .btn-max {
+    width: 100%;
+    margin-top: 30px;
+    display: block;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #9B51E0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  .btn__item {
+    width: 100%;
+    margin-top: 30px;
+    display: block;
+    font-size: 8px;
+    padding: 8px 16px;
+    background-color: #9B51E0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  .btn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+@media (max-width: 600px) {
+  button {
+    margin-top: 26px;
+    display: block;
+    font-size: 8px;
+    padding: 6px 10px;
+    background-color: #9B51E0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  .btn-max {
+    width: 100%;
+    margin-top: 26px;
+    display: block;
+    font-size: 16px;
+    padding: 8px 10px;
+    background-color: #9B51E0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  .btn__item {
+    width: 100%;
+    margin-top: 30px;
+    display: block;
+    font-size: 8px;
+    padding: 8px 16px;
+    background-color: #9B51E0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  .btn--none {
+    display: none;
+  }
+  .btn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit; /* sử dụng giá trị từ thẻ cha */
+  text-decoration: none; /* không có đường gạch chân */
+  display: inline; /* biến thành phần tử inline */
+}
+
+html {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding-inline: 10px;
+  padding-block: auto;
+  padding-block: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (min-width: 1025px) {
+  .navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    background: #fff;
+  }
+  .navbar--logo {
+    position: absolute;
+    left: 6%;
+    float: left;
+    margin-right: 350px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 19px;
+    text-align: center;
+    color: #9B51E0;
+  }
+  .navbar--menu {
+    display: flex;
+    gap: 50px;
+  }
+  .menu__item {
+    font-weight: 700;
+    font-size: 18px;
+    color: #4F4F4F;
+    font-family: "Roboto", sans-serif;
+  }
+  .account {
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    background-color: white;
+    border: 2px solid #9B51E0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-solid {
+    padding: 10px;
+  }
+  .fa-user {
+    position: relative;
+  }
+  .setting {
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    background: #fff;
+    color: #9B51E0;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.922);
+  }
+  .setting li {
+    padding: 10px;
+  }
+  .setting li:hover {
+    background: #d6cccc;
+    color: rgba(243, 11, 11, 0.884);
+  }
+  .user--icon:hover .setting {
+    display: block;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  .navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .navbar--logo {
+    position: absolute;
+    left: 10%;
+    margin-right: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #9B51E0;
+  }
+  .navbar--menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu__item {
+    font-weight: 500;
+    font-size: 8px;
+    color: #4F4F4F;
+    font-family: "Roboto", sans-serif;
+  }
+  .account {
+    background-color: white;
+    border: 2px solid #9B51E0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    position: absolute;
+    right: 10%;
+  }
+  .fa-solid {
+    padding: 3px;
+  }
+  .setting {
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    background: #fff;
+    color: #9B51E0;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.922);
+    font-size: 10%;
+  }
+  .setting li {
+    padding: 10px;
+  }
+  .setting li:hover {
+    background: #d6cccc;
+    color: rgba(243, 11, 11, 0.884);
+  }
+  .user--icon:hover .setting {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .navbar--logo {
+    margin-right: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    text-align: center;
+    color: #9B51E0;
+  }
+  .navbar--menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu__item {
+    font-weight: 400;
+    font-size: 7px;
+    color: #4F4F4F;
+    font-family: "Roboto", sans-serif;
+  }
+  .account {
+    background-color: white;
+    border: 2px solid #9B51E0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 2%;
+    font-size: 8px;
+  }
+  .account:hover .setting {
+    display: block;
+  }
+  .fa-solid {
+    padding: 6px;
+  }
+  .setting {
+    display: none;
+    position: absolute;
+    top: 7%;
+    right: 0;
+    background: #fff;
+    color: #9B51E0;
+    font-size: 8px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.922);
+  }
+  .setting li {
+    padding: 6px;
+  }
+  .user--icon:hover {
+    background: #d6cccc;
+    color: rgba(243, 11, 11, 0.884);
+  }
+}
+.active {
+  color: #9B51E0;
+}
+
 .content {
+  margin-top: 90px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
+  align-items: start;
+  gap: 50px;
 }
 
 @media (min-width: 1025px) {
   .img__room {
-    width: 600px;
-    height: 500px;
+    width: 700px;
+    height: 650px;
   }
   .controls {
-    width: 300px;
+    width: 500px;
     padding: 12px 15px;
     border: 2px solid #69e638;
     border-radius: 40px;
     margin-bottom: 30px;
+    padding: 16px 24px;
+    font-size: 23px;
   }
   .floatLabel {
     width: 70%;
     background: white;
     border: none;
+    font-size: 23px;
+  }
+  .floatLabel--peopel {
+    width: 20%;
+    background: white;
+    border: none;
+    font-size: 23px;
+  }
+  .input--date {
+    width: 300px;
+  }
+  .room__price {
+    margin-top: 20px;
+    font-family: "Dancing Script", cursive;
+    color: #9B51E0;
+    font-size: 32px;
+  }
+  .room__name {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .room__name > span {
+    color: #FF3300;
   }
   select {
     width: 10%;
+  }
+  .btn__booking--room {
+    margin-top: 50px;
+    font-size: 23px;
+    padding: 8px 16px;
   }
 }/*# sourceMappingURL=booking_room.css.map */

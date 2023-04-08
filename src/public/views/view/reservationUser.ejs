@@ -16,7 +16,7 @@
                    <form action="/delete/reservation/<%= reservation[i].id %>" method="post">
                     <h1 class="description__title" style="font-size: 20px;" >Phòng số: <%= reservation[i].nameRoom %> </h1>
                     <p class="description__text" style="font-size: 20px;">Giá phòng: <%= reservation[i].total_price %> </p>
-                    <p class="description__text" style="font-size: 20px;">Thời gian đến <%= reservation[i].checkInDate %></p>
+                    <p class="description__text" style="font-size: 20px;">Thời gian đến <%= `${reservation[i].checkInDate.getDate()}/${reservation[i].checkInDate.getMonth() + 1}/${reservation[i].checkInDate.getFullYear().toString().substr(-2)}` %></p>
                     <p class="description__text" style="font-size: 20px;">Thời gian rời đi: <%= reservation[i].checkOutDate %> </p>
                    </form>
                 </div>

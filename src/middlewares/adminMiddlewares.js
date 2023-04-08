@@ -10,10 +10,9 @@ const adminMiddleware = async(req,res,next) => {
 
     if(!account){
         return res.redirect("/login");
-        
     }
     if(!account.checkAdmin){
-        return res.redirect("home");
+        return res.redirect("/");
     }
     next();
 };

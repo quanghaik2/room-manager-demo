@@ -9,7 +9,8 @@ const reservationController =
             // const newReservation = new reservation({idUser: req.cookies.idUser , idRoom: req.params.idRoom, checkInDate: req.body.checkInDate, checkOutDate: req.body.checkOutDate})
             // const saveReservation = await newReservation.save();
             // console.log(req.cookies.UserID);
-            res.status(200).render("booking_room",{id: req.params.idRoom});
+            const room = await Room.findById(req.params.idRoom);
+            res.status(200).render("booking_room",{room: room});
         }
         catch(err){
             res.status(500).json({message: err.message});
