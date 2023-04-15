@@ -45,7 +45,7 @@ const authenticationController = {
             if(user.id){
                 res.cookie("idUser", user.idUser);
                 const getButton = true;
-               return res.status(200).render("home",{title:"Chúng tôi cam kết luôn mang đến cho bạn dịch vụ tốt nhất", getButton: getButton});
+               return res.status(200).render("/",{title:"Chúng tôi cam kết luôn mang đến cho bạn dịch vụ tốt nhất", getButton: getButton});
                 // res.json(user);
             }
             else
@@ -60,10 +60,10 @@ const authenticationController = {
     },
     admin: async(req,res) =>{
         try{
-                const response = (await axios.get('http://localhost:3000/all-rooms'));
+                const response = (await axios.get('/all-rooms'));
                 const rooms = response.data;
-                const users = (await axios.get('http://localhost:3000/get_all_user')).data;
-                const reservations = (await axios.get('http://localhost:3000/reservation')).data
+                const users = (await axios.get('/get_all_user')).data;
+                const reservations = (await axios.get('/reservation')).data
                 const totalPrices = reservations.reduce((totalPrice, reservation)=>{
                     return totalPrice + reservation.total_price 
                 },0)
