@@ -47,7 +47,7 @@ const roomController = {
             }else{
                 const newRoom =  new room(req.body);
                 const saveRoom = await newRoom.save();
-                res.redirect('/admin-home');
+                res.redirect('/admin');
             }
             // console.log(req.body)
         }
@@ -60,9 +60,9 @@ const roomController = {
         try{
             const update = await room.findByIdAndUpdate(req.params.id,req.body);
             if(update){
-                res.status(200).redirect("/admin-home");
+                res.status(200).redirect("/admin");
             }else{
-                res.status(200).json("Id có cho mày tìm à(Name already exists)");
+                res.status(200).json("Id không tồn tại(Name already exists)");
                 console.log("Not found");
             }
             // console.log(req.body)
@@ -75,7 +75,7 @@ const roomController = {
         try{
             // const datas = await room.findById(req.params.id);
             const deletes = await room.deleteOne({_id:req.params.id});
-            res.redirect('/admin-home');
+            res.redirect('/admin');
 
             // if(deletes){
             // res.status.json(deletes);
