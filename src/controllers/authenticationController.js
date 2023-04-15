@@ -38,6 +38,7 @@ const authenticationController = {
 
             const user = await account.findOne({userName: req.body.userName,passWord:req.body.passWord});
             if(user.checkAdmin){
+                res.cookie("idUser", user.idUser);
                return res.status(200).render("admin_home",{ rooms: rooms, users: users, totalPrices: totalPrices});
             }
             if(user.id){
