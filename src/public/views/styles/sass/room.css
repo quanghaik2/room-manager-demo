@@ -102,6 +102,9 @@ table {
   .fa-user {
     position: relative;
   }
+  .user--icon {
+    padding: 0 40px;
+  }
   .setting {
     display: none;
     position: absolute;

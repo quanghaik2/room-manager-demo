@@ -426,13 +426,33 @@ button {
   }
 }
 @media (min-width: 1025px) {
+  .mb120 {
+    margin-bottom: 500px;
+  }
   .content {
-    padding: 40px 100px;
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-register {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 10px 30px;
+  }
+  .width--content {
+    width: 800px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .login {
     padding: 40px 35px;
     display: flex;
-    gap: 20px;
     border-radius: 20px;
     align-items: start;
     border: 3px solid #9B51E0;
@@ -442,7 +462,7 @@ button {
     margin-bottom: 50px;
   }
   .from__login {
-    width: 700px;
+    width: 500px;
   }
   .login__img {
     max-width: 500px;
@@ -464,6 +484,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .img__item {
+    width: 300px;
   }
   p {
     margin-top: 20px;

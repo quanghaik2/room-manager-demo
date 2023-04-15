@@ -46,8 +46,8 @@
                    <form action="/delete/reservation/<%= reservation[i].id %>" method="post">
                     <h1 class="description__title">Phòng số: <%= reservation[i].nameRoom %>  </h1>
                     <p class="description__text">giá phòng: <%= reservation[i].total_price %> </p>
-                    <p class="description__text">Thời gian đến <%= reservation[i].checkInDate %></p>
-                    <p class="description__text">thời gian rời đi: <%= reservation[i].checkOutDate %> </p>
+                    <p class="description__text">Thời gian đến <span class="date"><%= reservation[i].checkInDate %></span></p>
+                    <p class="description__text">thời gian rời đi: <span class="date"><%= reservation[i].checkOutDate %></span> </p>
                     <button type="submit" class="btn__cancel">Hủy đặt phòng</button>
                    </form>
                 </div>
@@ -55,6 +55,24 @@
         </div>
     </div>
 
-    
+    <script>
+        const dateElements = document.querySelectorAll(".date"); // Lấy tất cả các phần tử thẻ p có class là "date"
+        
+            console.log(dateElements[1].textContent);
+            const dates =[];
+            dateElements.forEach((d) =>{
+            const dateObj = new Date(d.textContent);
+            const day = dateObj.getDate();
+            const month = dateObj.getMonth() + 1; // Tháng bắt đầu từ 0, nên cần cộng thêm 1
+            const year = dateObj.getFullYear();
+            const formattedDate = `${day}/${month}/${year}`;
+            dates.push(formattedDate);
+        })
+
+        for(var i = 0; i <dateElements.length; i++) {
+            dateElements[i].textContent = dates[i]
+        }
+
+    </script>
 </body>
 </html>

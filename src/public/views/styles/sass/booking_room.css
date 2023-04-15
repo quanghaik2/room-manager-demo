@@ -333,6 +333,9 @@ table {
   .fa-user {
     position: relative;
   }
+  .user--icon {
+    padding: 0 40px;
+  }
   .setting {
     display: none;
     position: absolute;
@@ -494,10 +497,14 @@ table {
   gap: 50px;
 }
 
+.flex {
+  display: flex;
+}
+
 @media (min-width: 1025px) {
   .img__room {
-    width: 700px;
-    height: 650px;
+    width: 600px;
+    height: 550px;
   }
   .controls {
     width: 500px;

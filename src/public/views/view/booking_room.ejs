@@ -41,14 +41,13 @@
             <input type="datetime-local" id="depart" class="floatLabel input--date" name="checkOutDate" value="<?php echo date('d-m-Y'); ?>" />
             <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Ngày đi</label>
           </div>  
-          <h1>Chọn số người</h1>
-          <select class="floatLabel--peopel" name="people">
-            <!-- <option value="blank"></option> -->
+          <!-- <select class="floatLabel--peopel" name="people">
+            
             <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-          </select>
+          </select> -->
           <div class="room__price">$ <%= room.price %>/ngày</div>
           <button class="btn__booking--room" type="submit">
             Đặt phòng
@@ -56,6 +55,9 @@
       </form>
     </div>
   </div>
+
+  <script>
+  </script>
 </body>
 </html>
 
@@ -73,7 +75,7 @@
     Forked from @soulrider911 https://codepen.io/soulrider911/pen/ugnyl/
     font: Lato (google font)
     Icon font:   http://fontawesome.io/icons/
-
+    <option value="blank"></option> 
     ==== @TODO ====
 
     Make <select> easier to select
