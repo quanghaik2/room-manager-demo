@@ -35,8 +35,6 @@ const authenticationController = {
                 return totalPrice + reservation.total_price 
             },0)
             // const aRoom = (await axios.get(`http://localhost:3000/get-a-rooms/${idRoom}`)).data
-            
-
 
             const user = await account.findOne({userName: req.body.userName,passWord:req.body.passWord});
             if(user.checkAdmin){
@@ -45,8 +43,8 @@ const authenticationController = {
             if(user.id){
                 res.cookie("idUser", user.idUser);
                 const getButton = true;
-               return res.status(200).render("/",{title:"Chúng tôi cam kết luôn mang đến cho bạn dịch vụ tốt nhất", getButton: getButton});
-                // res.json(user);
+                // return res.status(200).render("home",{title:"Chúng tôi cam kết luôn mang đến cho bạn dịch vụ tốt nhất", getButton: getButton});
+                return res.redirect('/');
             }
             else
             {
@@ -97,7 +95,6 @@ const authenticationController = {
                 callbackURL: "http://localhost:3000/loginGg"
               },
               function(accessToken, refreshToken, profile, cb) {
-                console.log(profile);
                return {cd}
               }
             )); 
