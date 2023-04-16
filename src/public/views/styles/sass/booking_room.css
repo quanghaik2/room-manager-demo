@@ -7,7 +7,6 @@
     justify-content: center;
     align-items: center;
     background-size: 100%;
-    animation: blink 2s infinite;
   }
   .bkg__title--header {
     color: #beb1b1;

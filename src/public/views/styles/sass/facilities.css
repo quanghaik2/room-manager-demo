@@ -266,7 +266,6 @@ table {
     justify-content: center;
     align-items: center;
     background-size: 100%;
-    animation: blink 2s infinite;
   }
   .bkg__title--header {
     color: #beb1b1;
@@ -330,7 +329,7 @@ header {
     font-weight: 700;
   }
   .footer--contacts p {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
   }
   .footer__item,
@@ -393,12 +392,12 @@ header {
   .description__text {
     margin-top: 35px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 18px;
     color: #4F4F4F;
   }
   .description__title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 22px;
     color: #9B51E0;
   }
 }

@@ -6,13 +6,22 @@
         justify-content: center;
         align-items: center;
         background-size: 100%;
-        animation: blink 2s infinite;
+        // animation: flash 5s infinite;
     }
     .bkg__title--header{
         color: #beb1b1;
         font-weight: 700;
         font-size: 40px;
     }
+
+    // @keyframes flash {
+    //     25% { background-image: url("https://www.woodbinedevelopment.com/wp-content/uploads/2019/05/hero-legacy-2000x700.jpg"); 
+    //        } 
+    //     50%{ background-image: url("https://149345965.v2.pressablecdn.com/wp-content/uploads/img-hotels-country-inn-hotel.jpg");
+    //         }/*Màu ban đầu*/
+    //     75%{ background-image: url("https://www.imghoteles.com/wp-content/uploads/sites/1709/nggallery/desktop-pics//fott1.jpg");
+    //         }/*Màu ban đầu*/
+    //     }
 
 }
 @media (min-width: 600px) and (max-width: 1024px){

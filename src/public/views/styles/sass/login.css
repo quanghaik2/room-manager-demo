@@ -285,12 +285,12 @@ button {
   .description__text {
     margin-top: 35px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 18px;
     color: #4F4F4F;
   }
   .description__title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 22px;
     color: #9B51E0;
   }
 }
